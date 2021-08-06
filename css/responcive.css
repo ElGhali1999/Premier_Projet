@@ -1,0 +1,428 @@
+*{
+	margin: 0;
+	padding:0;
+}
+body{
+	font-family: lucida sans;
+	perspective: 600px;
+}
+.box span a{
+	text-decoration: none;
+	color: black;
+}
+.navbar{
+	position: relative;
+	background: #fff;
+	padding: 20px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #000;
+}
+.container{
+	width: 85%;
+	margin: auto;
+
+}
+.navbar .logo{
+	width:50%;
+	float: left;
+}
+.navbar .logo .text-logo{
+	text-shadow: 0px 20px 5px #bfb7b7;
+	font-size: 30px;
+}
+.navbar input{
+	display: none;
+}
+.navbar input , .navbar label{
+	position: absolute;
+	top: 7px;
+	right: 19px;
+}
+.navbar label{
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-image: url(opene.png);
+	background-size: cover;
+	padding: 20px;
+}
+.navbar input:checked ~ .list{
+	display: block;
+}
+.navbar input:checked ~ label{
+	
+	background-image: url(ferme.png);
+	background-size: cover;
+
+}
+.navbar .list{
+	width:50%;
+	float: right;
+	list-style: none;
+	display: inline-block;
+
+}
+.navbar .list .list-item{
+	transition: all .5s ease;
+	display: inline-block;
+	margin: 10px 0px;
+
+	
+}
+.navbar .list .list-item a{
+	text-decoration: none;
+	padding: 10px 15px;
+	color: #222;
+	font-weight: bold;
+
+}
+.navbar .list .list-item a:hover{
+	color: #eb5424;
+}
+.navbar .list .list-item:hover{
+	background-color: #fff;
+}
+.home{
+	height: 500px;
+	background:url(home.jpg);
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	position: relative;
+}
+.home .home-information{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.home .home-information .home-title{
+	font-size: 60px;
+	color: #5e5e5e;
+	margin-bottom: 20px;
+}
+.home .home-information .home-info{
+	font-size: 35px;
+	color: #eb5424;
+	margin-bottom: 20px;
+}
+.home .home-information .home-desc{
+	font-size: 20px;
+	line-height: 1.5;
+	color: #888;
+	margin-bottom: 20px
+}
+.home .home-information .home-desc span{
+	color: #000;
+}
+.home .home-information .home-btn{
+  border-radius: 10px;
+  background:#eb5424;
+  color: #fff;
+  font-size: 18px;
+  width: 150px;
+  padding:10px;
+  cursor: pointer;
+  border:0;
+  font-weight: bold;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.home .home-information .home-btn:hover{
+	background:#fff;
+  color: #eb5424;
+}
+.work{
+	overflow: hidden;
+	height: auto;
+	padding:50px 0;
+	background:#fff;
+}
+ .work .work-titel{
+ 	text-shadow: 0px 20px 5px #bfb7b7;
+ 	font-size: 60px;
+ }
+ .work .work-titel span{
+ 	font-weight: normal;
+ }
+ .work .part{
+ 	box-shadow: 10px 10px 10px #DDD;
+ 	width:30%;
+ 	height:auto;
+ 	float: left;
+ 	margin-top: 20px;
+ 	width:30%;
+ 	padding:100px 0;
+ 	border: 1px solid #DDD;
+ 	text-align: center;
+ 	box-sizing: border-box;
+ 	margin-left: 5%;
+ 	transition: all .5s ease-in-out;
+ 	transform-style: preserve-3d;
+ 	cursor: pointer;
+ }
+ .work .part:hover{
+ 	transform: translateY(-20px);
+ }
+ .work .part .part-title{
+ 	font-size: 25px;
+ 	color: #eb5424;
+ 	margin-bottom: 20px;
+ }
+ .work .part .line{
+ 	width: 60%;
+ 	margin: auto;
+ 	margin-bottom:29px;
+ }
+ .work .part .part-desc {
+ 	font-size: 14px
+ 	color#888;
+ 	padding: 20px;
+
+ }
+ .work .normal{
+ 	margin-left: 0;
+ }
+ .portfolio{
+ 	background: #f8f8f8;
+ 	margin-top: 20px;
+ 	overflow: hidden;
+ }
+ .portfolio .portfolio-title{
+ 	text-shadow: 0px 20px 5px #bfb7b7;
+ 	text-align: center;
+ 	font-size: 35px;
+ }
+ .portfolio .portfolio-title span{
+ 	font-weight: normal;
+ }
+ .portfolio .portfolio-list{
+ 	text-align: center;
+ 	list-style:none;
+ 	margin:20px 0;
+ }
+ .portfolio .portfolio-list .portfolio-item{
+ 	cursor: pointer;
+ 	display: inline-block;
+ 	width: 100px;
+ 	padding: 10px;
+ }
+ .portfolio .portfolio-list .portfolio-item.active{
+ 	background: #eb5424;
+ 	color: #fff;
+ }
+ .box div{
+    
+ 	width: 25%;
+ 	float: left;
+ 	font-size: 0;
+ 	position: relative;
+ }
+ .box div img{
+
+ 	width: 100%;
+ }
+ .box div .overlay{
+ 	transition: all 1s ease-in-out;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	font-size: 15px;
+ 	background:rgba(235,84,36,0.5);
+ 	opacity: 0;
+ 	
+
+ }
+ .box div .overlay span{
+ 	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%,-50%);
+ 	background: #fff;
+ 	display: block;
+ 	padding: 10px 20px;
+ 	cursor: pointer;
+ 	border-top-right-radius: 10px;
+ }
+ .box div:hover .overlay{
+ 	opacity: 1;
+ }
+ .profile-skills{
+ 	overflow: hidden;
+ 	padding: 50px ;
+ }
+.profile-skills .profil{
+	float: left;
+	width:50%;
+}
+.profile-skills .profil .profile-list{
+	list-style: none;
+}
+.profile-skills .profil .profile-list .profile-item {
+	margin-bottom: 8px;
+}
+.profile-skills .profil .profile-list .profile-item span{
+	width: 100px;
+	display: inline-block;
+	font-weight:bold;
+}
+.profile-skills .skills{
+	float: left;
+	width:50%;
+}
+.profile-skills .skills .bar .title{
+   float: left;
+}
+.profile-skills .skills .bar .porc{
+	float: right;
+	margin-right: 100px;
+}
+.profile-skills .skills .bar{
+	overflow: hidden;
+	padding: 10px;
+}
+.profile-skills .skills .bar .parent span{
+	background: #eb5424;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	display: block;
+}
+.profile-skills .skills .bar .parent span.sp1{
+	width: 100%;
+}
+.profile-skills .skills .bar .parent span.sp2{
+	width: 90%;
+}
+.profile-skills .skills .bar .parent span.sp3{
+	width: 80%;
+}
+.profile-skills .skills .bar .parent{
+	height: 2px;
+	clear: both;
+	position: relative;
+	background: #f8f8f8;
+	
+}
+.profile-skills .skills .profil-skills,
+.profile-skills .profil .profil-title{
+	margin-bottom: 20px;
+	font-size: 40px;
+}
+.profile-skills .skills .skills-text{
+	font-size: 15px;
+	font-weight: 1.5;
+	color: #888;
+	margin-bottom: 20px;
+}
+.profile-skills .skills .profil-skills span,
+.profile-skills .profil .profil-title span{
+	font-weight: normal;
+}
+.creative{
+	
+	
+	background-position:center;
+
+}
+.creative img{
+	width: 100%;
+	height: 80%;
+}
+
+
+ @media (max-width: 768px) {
+ 	.work .part{
+ 		width: 47%;
+ 	}
+ 	.work .last{
+ 		margin-left: 0;
+ 	}
+ 	 .box div{
+    
+	 	width: 50%;	
+	 }
+	 .portfolio .portfolio-list .portfolio-item{
+	 	display: block;
+	 	margin:auto;
+	 }
+
+ }
+ @media (max-width: 575px) {
+ 	.work .part {
+ 		width: 100%;
+ 		float: none;
+ 		margin-left: 0;
+ 	}
+ 	.box div{
+ 		width: 100%;
+ 	}
+ 	.profile-skills .skills,
+ 	.profile-skills .profil{
+ 		width: 100%;
+ 		float: none;
+ 		
+ 	}
+ 	.profile-skills .profil{
+ 		margin-bottom: 20px;
+ 	}
+
+
+ 	
+ }
+
+@media (max-width: 923px){
+	.home .home-information .home-title {
+		font-size: 40px;
+		color: #fff;
+	}
+
+	.home .home-information .home-info {
+		font-size: 35px;
+		
+	}
+	.home .home-information .home-info{
+		font-size: 30px;
+	}
+}
+@media (max-width: 504px){
+	.home .home-information .home-title{
+		font-size: 25px;
+	}
+	.home .home-information .home-info{
+		font-size: 20px;
+	}
+	.home .home-information .home-desc{
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 1269px){
+	.navbar label{
+		display: none;
+	}
+}
+@media screen and (max-width: 1268px){
+	.navbar .logo{
+		width:100%;
+		float: none;
+		text-align: center;
+      }
+      .navbar .list{
+		width:100%;
+		float: none;
+		text-align: center;
+		display: none;
+		
+	}
+	.navbar .list .list-item{
+		display: block;
+		padding: 10px;
+		border-bottom: 1px solid black;
+
+
+	}
+}
